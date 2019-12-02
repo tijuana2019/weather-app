@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import WeatherIcon from 'react-icons-weather';
+import moment from 'moment';
 
 const ForecastSummary = props => (
   <div>
     <div className="forecast-summary__date">
-      {props.date}
-      <span />
+      <span>{moment(props.date).format('ddd Do MMM')}</span>
     </div>
     <div className="forecast-summary__temperature">
-      {props.temperature}
-      <span />
+      <span>{props.temperature}</span>
     </div>
     <div className="forecast-summary__description">
-      {props.description}
-      <span />
+      <span>{props.description}</span>
     </div>
     <div className="forecast-summary__icon">
-      {props.icon}
-      <span />
+      <WeatherIcon name="owm" iconId="200" flip="horizontal" rotate="90" />
     </div>
   </div>
 );

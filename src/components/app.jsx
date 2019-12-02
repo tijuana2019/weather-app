@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummaries from './forecast-summaries';
 import '../styles/app.css';
+import '../styles/forecast-summaries.css';
 
 const App = props => (
   <div className="forecast">
