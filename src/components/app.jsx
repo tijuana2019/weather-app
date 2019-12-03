@@ -22,18 +22,21 @@ class App extends React.Component {
   }
 
   render() {
-    const selectedForecast = this.props.forecasts.find(forecast => forecast.date === this.state.selectedDate);
+    const selectedForecast = this.props.forecasts.find(
+      forecast => forecast.date === this.state.selectedDate,
+    );
 
     return (
       <div className="forecast">
         <LocationDetails city={this.props.location.city} country={this.props.location.country} />
-        <ForecastSummaries forecasts={this.props.forecasts} />
+        <ForecastSummaries
+          onForecastSelect={this.handleForecastSelect}
+          forecasts={this.props.forecasts}
+        />
         <ForecastDetails forecast={this.selectedForecast} />
       </div>
     );
   }
-
-  
 }
 
 App.propTypes = {
