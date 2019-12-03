@@ -15,7 +15,7 @@ const ForecastSummary = props => (
       <span>{props.description}</span>
     </div>
     <div className="forecast-summary__icon">
-      <WeatherIcon name="owm" iconId="200" flip="horizontal" rotate="90" />
+      <WeatherIcon name="owm" iconId={props.icon} />
     </div>
   </div>
 );
